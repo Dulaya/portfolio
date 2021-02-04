@@ -7,6 +7,6 @@ export const logoStyle = {
 }
 
 export const logoStyleSmall = {
-    height: '35px',
+    maxHeight: '25px',
     margin: '5px'
 }
