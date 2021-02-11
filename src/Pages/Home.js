@@ -28,141 +28,139 @@ const Home = () => {
 
     return (
         <>
-                <Container>
-                    <Container horizontal='true' style={{ textAlign: 'center', margin: 'auto', }}>
+            <Container>
+                <Container horizontal='true' style={{ textAlign: 'center', margin: 'auto', }}>
 
-                        <Card style={{ margin: '5px', padding: '10px', textAlign: 'left', }}>
-                            <Media>
-                                <Image className="mr-3"
-                                    variant="top" src={dulaya} roundedCircle style={{ width: '125px', }} />
-                                <Media.Body>
-                                    <Card.Title>Dulaya Saennok</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted">Software Developer</Card.Subtitle>
-                                    <Card.Text >
-                                        Well-rounded engineer specializing in front end development.
-                                        Currently working on open source math education projects.
-                                        Professional experience in mechanical engineering and patent research.
+                    <Card style={{ margin: '5px', padding: '10px', textAlign: 'left', }}>
+                        <Media>
+                            <Image className="mr-3"
+                                variant="top" src={dulaya} roundedCircle style={{ width: '125px', }} />
+                            <Media.Body>
+                                <Card.Title>Dulaya Saennok</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">Software Developer</Card.Subtitle>
+                                <Card.Text >
+                                    I am a self-taught software developer with a Bachelor's degree in mechanical engineering and a professional experience in patent research. Currently I am working on opensource math education projects using React and another app with a small team of developers from diverse backgrounds. I am a lifelong learner, and I use what I learned to build tools that solve problems for me or others (e.g. learning apps). I also enjoy teaching basic programming to people that just learn to code. My skills include JavaScript, React, Redux, Node.js, Express, Python, Django, PHP and MySQL. I am looking for a Jr. developer role, and I am a US citizen.
                             </Card.Text>
-                                </Media.Body>
-                            </Media>
-                        </Card>
-                    </Container>
-
-                    <Container horizontal='true' style={{ textAlign: 'center', margin: 'auto', }}>
-
-                        <Row>
-                            <Col>
-                                <Card style={{ margin: '5px', padding: '10px', textAlign: 'center', }}>
-                                    <Card.Title>My Skills</Card.Title>
-                                </Card>
-                            </Col>
-                        </Row>
-
-                        <Row style={{ float: 'center' }}>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={JSlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    JavaScript
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Reactlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    React
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Reduxlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Redux
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Nodelogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Node.js
-                        </ListGroup.Item>
-                            </Col>
-                        </Row>
-                        <Row style={{ float: 'center' }}>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Pythonlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Python
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Djangologo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Django
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={PHPlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    PHP
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={MySQLlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    MySQL
-                        </ListGroup.Item>
-                            </Col>
-                        </Row>
-                        <Row style={{ float: 'center' }}>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={Gitlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Git
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={HTMLlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    HTML
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={CSSlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    CSS
-                        </ListGroup.Item>
-                            </Col>
-                            <Col style={columnStyle}>
-                                <ListGroup.Item>
-                                    <Image src={SQLlogo} rounded style={logoStyle} />
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    SQL
-                        </ListGroup.Item>
-                            </Col>
-                        </Row>
-                    </Container>
-
+                            </Media.Body>
+                        </Media>
+                    </Card>
                 </Container>
+
+                <Container horizontal='true' style={{ textAlign: 'center', margin: 'auto', }}>
+
+                    <Row>
+                        <Col>
+                            <Card style={{ margin: '5px', padding: '10px', textAlign: 'center', }}>
+                                <Card.Title>My Skills</Card.Title>
+                            </Card>
+                        </Col>
+                    </Row>
+
+                    <Row style={{ float: 'center' }}>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={JSlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                JavaScript
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Reactlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                React
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Reduxlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                Redux
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Nodelogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                Node.js
+                        </ListGroup.Item>
+                        </Col>
+                    </Row>
+                    <Row style={{ float: 'center' }}>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Pythonlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                Python
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Djangologo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                Django
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={PHPlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                PHP
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={MySQLlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                MySQL
+                        </ListGroup.Item>
+                        </Col>
+                    </Row>
+                    <Row style={{ float: 'center' }}>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Gitlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                Git
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={HTMLlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                HTML
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={CSSlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                CSS
+                        </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={SQLlogo} rounded style={logoStyle} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                SQL
+                        </ListGroup.Item>
+                        </Col>
+                    </Row>
+                </Container>
+
+            </Container>
 
         </>
 

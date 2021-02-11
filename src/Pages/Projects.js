@@ -160,7 +160,6 @@ const Projects = () => {
                     </Carousel>
                     <Row style={{ float: 'center' }}>
                         <Col style={columnStyle} >
-                            Tools Used:
                             <Image src={JSlogo} rounded style={logoStyleSmall} />
                             <Image src={Reactlogo} rounded style={logoStyleSmall} />
                             <Image src={HTMLlogo} rounded style={logoStyleSmall} />
@@ -207,7 +206,6 @@ const Projects = () => {
                     </Carousel>
                     <Row style={{ float: 'center' }}>
                         <Col style={columnStyle} >
-                            Tools Used:
                             <Image src={JSlogo} rounded style={logoStyleSmall} />
                             <Image src={PHPlogo} rounded style={logoStyleSmall} />
                             <Image src={MySQLlogo} rounded style={logoStyleSmall} />
@@ -250,7 +248,6 @@ const Projects = () => {
                     </Carousel>
                     <Row style={{ float: 'center' }}>
                         <Col style={columnStyle} >
-                            Tools Used:
                             <Image src={JSlogo} rounded style={logoStyleSmall} />
                             <Image src={HTMLlogo} rounded style={logoStyleSmall} />
                             <Image src={CSSlogo} rounded style={logoStyleSmall} />
@@ -292,7 +289,6 @@ const Projects = () => {
                     </Carousel>
                     <Row style={{ float: 'center' }}>
                         <Col style={columnStyle} >
-                            Tools Used:
                             <Image src={JSlogo} rounded style={logoStyleSmall} />
                             <Image src={Pythonlogo} rounded style={logoStyleSmall} />
                             <Image src={Djangologo} rounded style={logoStyleSmall} />
