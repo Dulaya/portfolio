@@ -39,7 +39,12 @@ const Home = () => {
                                 <Card.Title>Dulaya Saennok</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">Software Developer</Card.Subtitle>
                                 <Card.Text >
-                                    I am a self-taught software developer with a Bachelor's degree in mechanical engineering and a professional experience in patent research. Currently I am working on opensource math education projects using React and another app with a small team of developers from diverse backgrounds. I am a lifelong learner, and I use what I learned to build tools that solve problems for me or others (e.g. learning apps). I also enjoy teaching basic programming to people that just learn to code. My skills include JavaScript, React, Redux, Node.js, Express, Python, Django, PHP and MySQL. I am looking for a Jr. developer role, and I am a US citizen.
+                                    I am a self-taught software developer with a Bachelor's degree in mechanical engineering and a professional experience in patent research. 
+                                    Currently I am working on opensource math education projects using React and another app with a small team of developers from diverse backgrounds. 
+                                    I am a lifelong learner, and I use what I learned to build tools that solve problems for me or others (e.g. learning apps). 
+                                    I also enjoy teaching basic programming to people that just learn to code. 
+                                    My skills include JavaScript, React, Redux, Node.js, Express, Python, Django, PHP and MySQL. 
+                                    I am looking for a React developer role, and I am a US citizen.
                             </Card.Text>
                             </Media.Body>
                         </Media>
