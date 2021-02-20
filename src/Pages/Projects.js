@@ -10,6 +10,7 @@ import Image from 'react-bootstrap/Image';
 
 import { columnStyle, logoStyleSmall } from './Styles.js';
 
+import Collage from '../Images/collage.jpg';
 import YourTubePlaylist1 from '../Images/YourTube-Playlist-1.png';
 import YourTubePlaylist2 from '../Images/YourTube-Playlist-2.png';
 import YourTubePlaylist3 from '../Images/YourTube-Playlist-3.png';
@@ -62,7 +63,10 @@ const Projects = () => {
                     <Card.Title style={{ background: 'red', color: 'white', padding: '5px' }}>YourTube Playlist</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted" >
                         <Button style={buttonStyle} onClick={() => openInNewTab('https://yourtube-playlist.netlify.app')}>
-                            Demo
+                            Demo 1
+                        </Button>
+                        <Button style={buttonStyle} onClick={() => openInNewTab('https://yourtube-playlist-2.netlify.app')}>
+                            Demo 2
                         </Button>
                         <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/yourtube-playlist-client')}>
                             Repo (Client)
@@ -75,6 +79,14 @@ const Projects = () => {
                         YourTube Playlist is a web app that allows users to create playlists of YouTube videos simply by copying and pasting YouTube videos links.
                     </Card.Text>
                     <Carousel style={imgStyle} >
+                        <Carousel.Item>
+                            <img
+                                style={{ border: '2px dashed', borderColor: 'red' }}
+                                className="d-block w-100"
+                                src={Collage}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 style={{ border: '2px dashed', borderColor: 'red' }}
