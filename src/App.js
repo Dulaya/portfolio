@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 
 import Home from './Pages/Home';
@@ -10,17 +10,23 @@ const App = () => {
 
     return (
         <Router>
-            <Nav className="justify-content-center" defaultActiveKey="/" as='ul' style={{fontSize: '1.5rem', margin: '10px'}}>
+            <Nav className="justify-content-center" defaultActiveKey="/" as='ul'
+                style={{
+                    color: 'white',
+                    backgroundImage: `linear-gradient( 111.5deg, rgba(20,100,196,1) 0.4%, rgba(33,152,214,1) 100.2% )`,
+                    fontSize: '1.5rem',
+                    margin: '10px',
+                }}>
                 <Nav.Item>
-                    <Link to="/" style={{margin: '10px'}}>Home</Link>
+                    <Link to="/" style={{ color: 'white', margin: '10px', }}>Home</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to="/projects" style={{margin: '10px'}}>Projects</Link>
+                    <Link to="/projects" style={{ color: 'white', margin: '10px' }}>Projects</Link>
                 </Nav.Item>
                 <Nav.Item>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to="/contact" style={{margin: '10px'}}>Contact</Link>
+                    <Link to="/contact" style={{ color: 'white', margin: '10px' }}>Contact</Link>
                 </Nav.Item>
             </Nav>
 

@@ -3,7 +3,7 @@ export const columnStyle = {
 }
 
 export const logoStyle = {
-    height: '75px',
+    height: '65px',
 }
 
 export const logoStyleSmall = {

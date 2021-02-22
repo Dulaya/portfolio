@@ -1,16 +1,11 @@
 import React from "react";
 
-import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
+import { Carousel, Container, Row, Col, CardDeck, Card, Button, Image, ButtonGroup, } from 'react-bootstrap';
+import { FaGithubAlt } from 'react-icons/fa';
 
 import { columnStyle, logoStyleSmall } from './Styles.js';
 
-import Collage from '../Images/collage.jpg';
+import Collage from '../Images/Collage.png';
 import YourTubePlaylist1 from '../Images/YourTube-Playlist-1.png';
 import YourTubePlaylist2 from '../Images/YourTube-Playlist-2.png';
 import YourTubePlaylist3 from '../Images/YourTube-Playlist-3.png';
@@ -38,9 +33,14 @@ import MySQLlogo from '../Images/MySQL-logo.png';
 import HTMLlogo from '../Images/HTML-logo.png';
 import CSSlogo from '../Images/CSS-logo.png';
 
+const shadow = {
+    firstShadow: `0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)`,
+}
+
 const imgStyle = {
+    boxShadow: shadow.firstShadow,
     margin: 'auto',
-    maxWidth: '750px'
+    //maxWidth: '750px'
 }
 
 const buttonStyle = {
@@ -55,260 +55,307 @@ const Projects = () => {
         if (newWindow) newWindow.opener = null;
     }
 
+    const youTubePlayList = [Collage, YourTubePlaylist1, YourTubePlaylist2, YourTubePlaylist3];
+    const mathChat = [MathChat1, MathChat2, MathChat3];
+    const oneStopMath = [OneStopMath1, OneStopMath2, OneStopMath3];
+    const videoPoker = [VideoPoker1, VideoPoker2];
+    const pythonHelper = [PythonHelper1, PythonHelper2];
+
     return (
         <>
-            <Container horizontal='true' style={{ textAlign: 'center', margin: 'auto', }}>
+            <Container horizontal='true'>
 
-                <Card style={{ border: '5px solid', borderColor: 'red', margin: '5px', padding: '10px', textAlign: 'center', }}>
-                    <Card.Title style={{ background: 'red', color: 'white', padding: '5px' }}>YourTube Playlist</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" >
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://yourtube-playlist.netlify.app')}>
-                            Demo 1
-                        </Button>
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://yourtube-playlist-2.netlify.app')}>
-                            Demo 2
-                        </Button>
-                        <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/yourtube-playlist-client')}>
-                            Repo (Client)
-                        </Button>
-                        <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/yourtube-playlist-server')}>
-                            Repo (Server)
-                        </Button>
-                    </Card.Subtitle>
-                    <Card.Text >
-                        YourTube Playlist is a web app that allows users to create playlists of YouTube videos simply by copying and pasting YouTube videos links.
-                    </Card.Text>
-                    <Carousel style={imgStyle} >
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'red' }}
-                                className="d-block w-100"
-                                src={Collage}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'red' }}
-                                className="d-block w-100"
-                                src={YourTubePlaylist1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'red' }}
-                                className="d-block w-100"
-                                src={YourTubePlaylist2}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'red' }}
-                                className="d-block w-100"
-                                src={YourTubePlaylist3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                    </Carousel>
-                    <Row style={{ float: 'center' }}>
-                        <Col style={columnStyle} >
-                            <Image src={JSlogo} rounded style={logoStyleSmall} />
-                            <Image src={Reactlogo} rounded style={logoStyleSmall} />
-                            <Image src={Nodelogo} rounded style={logoStyleSmall} />
-                            <Image src={Mongologo} rounded style={logoStyleSmall} />
-                            <Image src={Expresslogo} rounded style={logoStyleSmall} />
-                            <Image src={HTMLlogo} rounded style={logoStyleSmall} />
-                            <Image src={CSSlogo} rounded style={logoStyleSmall} />
-                        </Col>
-                    </Row>
-                </Card>
-
-                <Card style={{
-                    border: '5px solid', borderColor: '#0EA895', margin: '5px', padding: '10px', textAlign: 'center',
-                }}>
+                <Card style={{ maxWidth: '750px', margin: '25px auto', }}>
                     <Card.Title style={{
-                        backgroundImage: 'radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 95, 104, 1) 0%, rgba(15, 156, 168, 1) 90%)',
+                        color: 'white', padding: '5px', textAlign: 'center',
+                        background: `linear-gradient(to right, #e45826, red)`,
+                    }}>YouTube Playlist</Card.Title>
+                    <Carousel style={imgStyle} >
+                        {
+                            youTubePlayList.map(picture =>
+                                <Carousel.Item key={picture}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={picture}
+                                        alt={picture}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
+                    </Carousel>
+                    <Card.Body style={{
                         color: 'white',
-                        padding: '5px'
-                    }}>Math Chat</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" >
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://mathchat.netlify.app')}>
-                            Demo
+                        textAlign: 'center',
+                        background: `linear-gradient(to right, #e45826, red)`,
+                    }}>
+                        <Row style={{ textAlign: 'center' }}>
+                            <Col style={{ maxWidth: '120px' }}>
+                                <ButtonGroup vertical>
+                                    <Button variant='outline-light' style={{}} onClick={() => openInNewTab('https://yt-playlist.com')}>
+                                        Demo
                         </Button>
-                        <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/mathchat')}>
-                            Repo
+                                    <Button variant="light" style={{ border: '1px solid', borderColor: 'white' }} onClick={() => openInNewTab('https://github.com/Dulaya/youtube-playlist-client')}>
+                                        <FaGithubAlt />  client
                         </Button>
-                    </Card.Subtitle>
-                    <Card.Text >
-                        Math Chat is a chat tool that helps users solve math problems.
-                    </Card.Text>
-                    <Carousel style={imgStyle} >
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#0EA895' }}
-                                className="d-block w-100"
-                                src={MathChat1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#0EA895' }}
-                                className="d-block w-100"
-                                src={MathChat2}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#0EA895' }}
-                                className="d-block w-100"
-                                src={MathChat3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                    </Carousel>
-                    <Row style={{ float: 'center' }}>
-                        <Col style={columnStyle} >
-                            <Image src={JSlogo} rounded style={logoStyleSmall} />
-                            <Image src={Reactlogo} rounded style={logoStyleSmall} />
-                            <Image src={HTMLlogo} rounded style={logoStyleSmall} />
-                            <Image src={CSSlogo} rounded style={logoStyleSmall} />
-                        </Col>
-                    </Row>
+                                    <Button variant="light" style={{ border: '1px solid', borderColor: 'white' }} onClick={() => openInNewTab('https://github.com/Dulaya/youtube-playlist-server')}>
+                                        <FaGithubAlt />  server
+                        </Button>
+                                </ButtonGroup>
+                            </Col>
+                            <Col>
+                                <Card.Text >
+                                    YouTube Playlist ( <span onClick={() => openInNewTab('https://yt-playlist.com')}
+                                        style={{
+                                            cursor: 'pointer',
+                                            textDecoration: 'underline',
+                                        }}>
+                                        https://yt-playlist.com
+                                            </span> )
+                                    is a web app that allows users to create an account and login in order to create a playlist of YouTube videos
+                                    simply by copying and pasting YouTube videos links. Users may also upload pictures corresponding to the videos.
+                            </Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Footer style={{ textAlign: 'center' }}>
+                        <Row >
+                            <Col style={columnStyle} >
+                                <Image src={JSlogo} rounded style={logoStyleSmall} />
+                                <Image src={Reactlogo} rounded style={logoStyleSmall} />
+                                <Image src={Nodelogo} rounded style={logoStyleSmall} />
+                                <Image src={Mongologo} rounded style={logoStyleSmall} />
+                                <Image src={Expresslogo} rounded style={logoStyleSmall} />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
                 </Card>
 
-                <Card style={{ border: '5px solid', borderColor: '#800000', margin: '5px', padding: '10px', textAlign: 'center', }}>
-                    <Card.Title style={{ background: '#800000', color: 'white', padding: '5px' }}>One Stop Math</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" >
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://onestopmath.com')}>
-                            Demo
-                        </Button>
-                    </Card.Subtitle>
-                    <Card.Text >
-                        One Stop Math is a website for learning math.
-                    </Card.Text>
+                <Card style={{ maxWidth: '750px', margin: '25px auto', }}>
+                    <Card.Title style={{
+                        color: 'white', padding: '5px', textAlign: 'center',
+                        backgroundImage: 'radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 95, 104, 1) 0%, rgba(15, 156, 168, 1) 90%)',
+                    }}>mαth chαt</Card.Title>
                     <Carousel style={imgStyle} >
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#800000' }}
-                                className="d-block w-100"
-                                src={OneStopMath1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#800000' }}
-                                className="d-block w-100"
-                                src={OneStopMath2}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#800000' }}
-                                className="d-block w-100"
-                                src={OneStopMath3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
+                        {
+                            mathChat.map(picture =>
+                                <Carousel.Item key={picture}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={picture}
+                                        alt={picture}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
                     </Carousel>
-                    <Row style={{ float: 'center' }}>
-                        <Col style={columnStyle} >
-                            <Image src={JSlogo} rounded style={logoStyleSmall} />
-                            <Image src={PHPlogo} rounded style={logoStyleSmall} />
-                            <Image src={MySQLlogo} rounded style={logoStyleSmall} />
-                            <Image src={HTMLlogo} rounded style={logoStyleSmall} />
-                            <Image src={CSSlogo} rounded style={logoStyleSmall} />
-                        </Col>
-                    </Row>
+                    <Card.Body style={{
+                        color: 'white',
+                        textAlign: 'center',
+                        backgroundImage: 'radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 95, 104, 1) 0%, rgba(15, 156, 168, 1) 90%)',
+                    }}>
+                        <Row style={{ textAlign: 'center' }}>
+                            <Col style={{ maxWidth: '120px' }}>
+                                <ButtonGroup vertical>
+                                    <Button variant='outline-light' style={{}} onClick={() => openInNewTab('https://mathchat.netlify.app')}>Demo</Button>
+                                    <Button variant="light" style={{ border: '1px solid', borderColor: 'white' }} onClick={() => openInNewTab('https://github.com/Dulaya/mathchat')}>
+                                        <FaGithubAlt />
+                                    </Button>
+                                </ButtonGroup>
+                            </Col>
+                            <Col>
+                                <Card.Text >
+                                    mαth chαt ( <span onClick={() => openInNewTab('https://mathchat.netlify.app')}
+                                        style={{
+                                            cursor: 'pointer',
+                                            textDecoration: 'underline',
+                                        }}>
+                                        mathchat.netlify.app
+                                            </span> )
+                                    is a chat interface web app that help users with algebra homework. Users can type into the input field on an algebra topic
+                                    such as Pythagorean Theorem. An interface will pop-up, allowing users to input numbers for solving Pythagorean Theorem.
+                            </Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Footer style={{ textAlign: 'center' }}>
+                        <Row >
+                            <Col style={columnStyle} >
+                                <Image src={JSlogo} rounded style={logoStyleSmall} />
+                                <Image src={Reactlogo} rounded style={logoStyleSmall} />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
                 </Card>
 
-                <Card style={{ border: '5px solid', borderColor: 'blue', margin: '5px', padding: '10px', textAlign: 'center', }}>
-                    <Card.Title style={{ background: 'blue', color: 'white', padding: '5px' }}>Video Poker Clone</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" >
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://videopokerclone.netlify.app/')}>
-                            Demo
-                        </Button>
-                        <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/videopoker')}>
-                            Repo
-                        </Button>
-                    </Card.Subtitle>
-                    <Card.Text >
-                        Video Poker Clone is a fake money video poker game.
-                    </Card.Text>
+                <Card style={{ maxWidth: '750px', margin: '25px auto', }}>
+                    <Card.Title style={{
+                        color: 'white', padding: '5px', textAlign: 'center',
+                        background: `linear-gradient(to right, #91091e, #ec4646)`,
+                    }}>One Stop Math</Card.Title>
                     <Carousel style={imgStyle} >
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'blue' }}
-                                className="d-block w-100"
-                                src={VideoPoker1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: 'blue' }}
-                                className="d-block w-100"
-                                src={VideoPoker2}
-                                alt="Second slide"
-                            />
-                        </Carousel.Item>
+                        {
+                            oneStopMath.map(picture =>
+                                <Carousel.Item key={picture}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={picture}
+                                        alt={picture}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
                     </Carousel>
-                    <Row style={{ float: 'center' }}>
-                        <Col style={columnStyle} >
-                            <Image src={JSlogo} rounded style={logoStyleSmall} />
-                            <Image src={HTMLlogo} rounded style={logoStyleSmall} />
-                            <Image src={CSSlogo} rounded style={logoStyleSmall} />
-                        </Col>
-                    </Row>
+                    <Card.Body style={{
+                        color: 'white',
+                        textAlign: 'center',
+                        background: `linear-gradient(to right, #91091e, #ec4646)`,
+                    }}>
+                        <Row style={{ textAlign: 'center' }}>
+                            <Col style={{ maxWidth: '120px' }}>
+                                <ButtonGroup vertical>
+                                    <Button variant='outline-light' style={{}} onClick={() => openInNewTab('https://onestopmath.com')}>Demo</Button>
+                                </ButtonGroup>
+                            </Col>
+                            <Col>
+                                <Card.Text >
+                                    One Stop Math ( <span onClick={() => openInNewTab('https://onestopmath.com')}
+                                        style={{
+                                            cursor: 'pointer',
+                                            textDecoration: 'underline',
+                                        }}>
+                                        https://onestopmath.com
+                                            </span> )
+                                    is a website containing math lessons and a forum, allowing users to ask and answer math questions.
+                            </Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Footer style={{ textAlign: 'center' }}>
+                        <Row >
+                            <Col style={columnStyle} >
+                                <Image src={JSlogo} rounded style={logoStyleSmall} />
+                                <Image src={PHPlogo} rounded style={logoStyleSmall} />
+                                <Image src={MySQLlogo} rounded style={logoStyleSmall} />
+                                <Image src={HTMLlogo} rounded style={logoStyleSmall} />
+                                <Image src={CSSlogo} rounded style={logoStyleSmall} />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
                 </Card>
 
-                <Card style={{ border: '5px solid', borderColor: '#f5dd42', margin: '5px', padding: '10px', textAlign: 'center', }}>
-                    <Card.Title style={{ background: '#f5dd42', color: 'white', padding: '5px' }}>Python Helper</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" >
-                        <Button style={buttonStyle} onClick={() => openInNewTab('https://dulaya.pythonanywhere.com/')}>
-                            Demo
-                        </Button>
-                        <Button variant="dark" style={buttonStyle} onClick={() => openInNewTab('https://github.com/Dulaya/Python-Reference-Helper')}>
-                            Repo
-                        </Button>
-                    </Card.Subtitle>
-                    <Card.Text >
-                        Python Helper is a search tool for finding Python references using machine learning.
-                    </Card.Text>
-
+                <Card style={{ maxWidth: '750px', margin: '25px auto', }}>
+                    <Card.Title style={{
+                        color: 'white', padding: '5px', textAlign: 'center',
+                        background: `linear-gradient(to right, blue, #111d5e)`,
+                    }}>Video Poker Clone</Card.Title>
                     <Carousel style={imgStyle} >
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#f5dd42' }}
-                                className="d-block w-100"
-                                src={PythonHelper1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                style={{ border: '2px dashed', borderColor: '#f5dd42' }}
-                                className="d-block w-100"
-                                src={PythonHelper2}
-                                alt="Second slide"
-                            />
-                        </Carousel.Item>
+                        {
+                            videoPoker.map(picture =>
+                                <Carousel.Item key={picture}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={picture}
+                                        alt={picture}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
                     </Carousel>
-                    <Row style={{ float: 'center' }}>
-                        <Col style={columnStyle} >
-                            <Image src={JSlogo} rounded style={logoStyleSmall} />
-                            <Image src={Pythonlogo} rounded style={logoStyleSmall} />
-                            <Image src={Djangologo} rounded style={logoStyleSmall} />
-                            <Image src={ScikitLearnlogo} rounded style={logoStyleSmall} />
-                        </Col>
-                    </Row>
+                    <Card.Body style={{
+                        color: 'white',
+                        textAlign: 'center',
+                        background: `linear-gradient(to right, blue, #111d5e)`,
+                    }}>
+                        <Row style={{ textAlign: 'center' }}>
+                            <Col style={{ maxWidth: '120px' }}>
+                                <ButtonGroup vertical>
+                                    <Button variant='outline-light' style={{}} onClick={() => openInNewTab('https://videopokerclone.netlify.app/')}>Demo</Button>
+                                    <Button variant="light" style={{ border: '1px solid', borderColor: 'white' }} onClick={() => openInNewTab('https://github.com/Dulaya/videopoker')}>
+                                        <FaGithubAlt />
+                                    </Button>
+                                </ButtonGroup>
+                            </Col>
+                            <Col>
+                                <Card.Text >
+                                    Video Poker Clone ( <span onClick={() => openInNewTab('https://videopokerclone.netlify.app/')}
+                                        style={{
+                                            cursor: 'pointer',
+                                            textDecoration: 'underline',
+                                        }}>
+                                        https://videopokerclone.netlify.app/
+                                            </span> )
+                                    is a fake money web app of video poker.
+                            </Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Footer style={{ textAlign: 'center' }}>
+                        <Row >
+                            <Col style={columnStyle} >
+                                <Image src={JSlogo} rounded style={logoStyleSmall} />
+                                <Image src={HTMLlogo} rounded style={logoStyleSmall} />
+                                <Image src={CSSlogo} rounded style={logoStyleSmall} />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
                 </Card>
 
+                <Card style={{ maxWidth: '750px', margin: '25px auto', }}>
+                    <Card.Title style={{
+                        padding: '5px', textAlign: 'center',
+                        background: `linear-gradient(to right, #f5dd42, yellow)`,
+                    }}>Python Helper</Card.Title>
+                    <Carousel style={imgStyle} >
+                        {
+                            pythonHelper.map(picture =>
+                                <Carousel.Item key={picture}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={picture}
+                                        alt={picture}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
+                    </Carousel>
+                    <Card.Body style={{
+                        textAlign: 'center',
+                        background: `linear-gradient(to right, #f5dd42, yellow)`,
+                    }}>
+                        <Row style={{ textAlign: 'center' }}>
+                            <Col style={{ maxWidth: '120px' }}>
+                                <ButtonGroup vertical>
+                                    <Button variant='outline-dark' style={{}} onClick={() => openInNewTab('https://dulaya.pythonanywhere.com/')}>Demo</Button>
+                                    <Button variant="light" style={{ border: '1px solid', borderColor: 'white' }} onClick={() => openInNewTab('https://github.com/Dulaya/Python-Reference-Helper')}>
+                                        <FaGithubAlt />
+                                    </Button>
+                                </ButtonGroup>
+                            </Col>
+                            <Col>
+                                <Card.Text >
+                                    Python Helper ( <span onClick={() => openInNewTab('https://dulaya.pythonanywhere.com/')}
+                                        style={{
+                                            cursor: 'pointer',
+                                            textDecoration: 'underline',
+                                        }}>
+                                        https://dulaya.pythonanywhere.com/
+                                            </span> )
+                                     is a search tool for finding Python references using machine learning.
+                            </Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Footer style={{ textAlign: 'center' }}>
+                        <Row >
+                            <Col style={columnStyle} >
+                                <Image src={JSlogo} rounded style={logoStyleSmall} />
+                                <Image src={Pythonlogo} rounded style={logoStyleSmall} />
+                                <Image src={Djangologo} rounded style={logoStyleSmall} />
+                                <Image src={ScikitLearnlogo} rounded style={logoStyleSmall} />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
+                </Card>
 
             </Container>
 
