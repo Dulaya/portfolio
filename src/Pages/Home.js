@@ -29,8 +29,16 @@ import JWTlogo from '../Images/JWT-logo.svg';
 import Engineeringlogo from '../Images/Engineering-logo.png';
 import Patentlogo from '../Images/Patent-logo.png';
 import Monitorlogo from '../Images/Monitor-logo.jpg';
+import CCPlogo from '../Images/CCP-logo.png';
+import Questionlogo from '../Images/Question-logo.png';
 
 const Home = () => {
+
+    //Open New Tab
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) newWindow.opener = null;
+    }
 
     return (
         <>
@@ -238,8 +246,53 @@ const Home = () => {
                             </ListGroup.Item>
                         </Col>
                     </Row>
-                </Container>
 
+                    <Row>
+                        <Col>
+                            <Card style={{
+                                color: 'white',
+                                margin: '5px', padding: '10px', textAlign: 'center',
+                                backgroundImage: `linear-gradient( 111.5deg, rgba(20,100,196,1) 0.4%, rgba(33,152,214,1) 100.2% )`
+                            }}>
+                                <Card.Title >Certifications</Card.Title>
+                            </Card>
+                        </Col>
+                    </Row>
+
+                    <Row style={{ float: 'center', }}>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={CCPlogo} rounded style={{ maxHeight: '150px' }} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <p>AWS Certified Cloud Practitioner</p>
+                                <p>Expires: 01 March 2024</p>
+                                <p style={{
+                                    color: 'blue',
+                                    cursor: 'pointer',
+                                    textDecoration: 'underline'
+                                }} onClick={() => openInNewTab('https://www.youracclaim.com/badges/a445f528-c099-4c24-b238-b8878891fde6')}>Verify</p>
+                            </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Questionlogo} rounded style={{ maxHeight: '150px' }} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <p >Working on it...</p>
+                            </ListGroup.Item>
+                        </Col>
+                        <Col style={columnStyle}>
+                            <ListGroup.Item>
+                                <Image src={Questionlogo} rounded style={{ maxHeight: '150px' }} />
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <p>Working on it...</p>
+                            </ListGroup.Item>
+                        </Col>
+                    </Row>
+
+                </Container>
             </Container>
 
         </>
