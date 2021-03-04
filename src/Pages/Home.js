@@ -267,6 +267,7 @@ const Home = () => {
                             <ListGroup.Item>
                                 <p>AWS Certified Cloud Practitioner</p>
                                 <p>Expires: 01 March 2024</p>
+                                <p>Validation: WGF0E45BK11EQPKT</p>
                                 <p style={{
                                     color: 'blue',
                                     cursor: 'pointer',
